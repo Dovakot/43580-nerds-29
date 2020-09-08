@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Анастасия Яковлева](https://up.htmlacademy.ru/htmlcss/29/user/43580).
-* Наставник: `Неизвестно`.
+* Наставник: [Artem Ryzhov](https://up.htmlacademy.ru/htmlcss/29/user/1387905).
 
 ---
 
