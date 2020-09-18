@@ -36,8 +36,12 @@
   --basic-red: #e74246;
   --basic-dark-red: #d7373b;
 
+  --special-dark: 77, 77, 77;
+  --special-neutral: #e1e1e1;
   --special-extra-light: rgba(255, 255, 255, 0.3);
-  --special-light-gray: #e1e1e1;
+  --special-gray: #dbdbdb;
+  --special-light-gray: #dfdfdf;
+  --special-dark-gray: #d5d5d5;
   --special-light-green: #00ca74;
   --special-green: #00bc6c;
   --special-dark-green: #00aa62;
@@ -78,7 +82,6 @@ img {
 }
 
 .button {
-  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -124,6 +127,15 @@ img {
 .nav__link:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.content__title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--basic-black);
+  text-align: center;
+  background-color: var(--basic-extra-light);
 }
 
 .slider {
@@ -231,6 +243,105 @@ img {
   opacity: 0.1;
 }
 
+.sorting__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sorting__list {
+  list-style: none;
+}
+
+.sorting__button {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.sorting__button--current {
+  opacity: 1;
+}
+
+.products__list {
+  list-style: none;
+}
+
+.card {
+  background-color: rgba(var(--special-dark), 0.12);
+}
+
+.card:hover {
+  background-color: rgba(var(--special-dark), 1);
+}
+
+.card__description {
+  text-align: center;
+  background-color: var(--basic-extra-light);
+}
+
+.card__name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.card__name:hover {
+  color: var(--basic-light-red);
+}
+
+.card__name:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.card__text {
+  line-height: 18px;
+  color: var(--basic-neutral);
+}
+
+.card__price:active {
+  color: var(--basic-white);
+}
+
+.pagination {
+  list-style: none;
+}
+
+.pagination__link {
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-black);
+  text-align: center;
+  background-color: var(--basic-extra-light);
+}
+
+.pagination__link[href]:hover {
+  background-color: var(--special-light-gray);
+}
+
+.pagination__link[href]:active {
+  background-color: var(--special-dark-gray);
+}
+
+.pagination__link--next {
+  text-transform: uppercase;
+}
+
+.pagination__link--current {
+  background-color: transparent;
+  border: 3px solid var(--special-gray);
+}
+
 .contacts__information {
   background-color: var(--basic-white);
 }
@@ -261,7 +372,7 @@ img {
 }
 
 .social__link {
-  background-color: var(--special-light-gray);
+  background-color: var(--special-neutral);
 }
 
 .social__link:hover {
