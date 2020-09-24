@@ -36,9 +36,11 @@
   --basic-red: #e74246;
   --basic-dark-red: #d7373b;
 
+  --special-black: rgba(0, 0, 0, 0.1);
   --special-dark: 77, 77, 77;
   --special-neutral: #e1e1e1;
   --special-extra-light: rgba(255, 255, 255, 0.3);
+  --special-light: #f2f2f2;
   --special-gray: #dbdbdb;
   --special-light-gray: #dfdfdf;
   --special-dark-gray: #d5d5d5;
@@ -180,13 +182,29 @@ img {
   opacity: 0.3;
 }
 
-.content__title {
+.content {
+  margin: 0 0 60px;
+}
+
+.content__container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-gap: 55px 140px;
+}
+
+.content__jumbotron {
+  min-height: 256px;
+  margin: 0 0 55px;
+  padding: 70px 0 30px;
+  background-color: var(--basic-extra-light);
+}
+
+.content__jumbotron-title {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
   text-align: center;
-  background-color: var(--basic-extra-light);
 }
 
 .slider {
@@ -319,7 +337,26 @@ img {
   opacity: 0.1;
 }
 
+.filters {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--basic-extra-light);
+}
+
+.sorting {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 0 60px;
+}
+
+.sorting__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .sorting__title {
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -342,12 +379,21 @@ img {
   opacity: 1;
 }
 
-.card {
-  background-color: rgba(var(--special-dark), 0.12);
+.products__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px 40px;
+  margin: 0 0 55px;
 }
 
-.card:hover {
-  background-color: rgba(var(--special-dark), 1);
+.card {
+  margin: 0;
+  background-color: var(--special-light);
+  border: 1px solid var(--special-black);
+}
+
+.card__image {
+  display: block;
 }
 
 .card__description {
@@ -379,6 +425,15 @@ img {
 
 .card__price:active {
   color: var(--basic-white);
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination__item:not(:last-child) {
+  margin: 0 10px 0 0;
 }
 
 .pagination__link {
