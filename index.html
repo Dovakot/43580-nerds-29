@@ -160,10 +160,13 @@
     <footer class="footer">
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="contacts__map-link" href="#" target="_blank">
-          <img src="img/map_image.jpg" width="1440" height="416" alt="Карта проезда">
-        </a>
-        <div class="container contacts__container">
+        <div class="contacts__map">
+          <a class="contacts__map-link contacts__map-link--hide" href="https://yandex.ru/maps/-/CCQ3iKHZdC" target="_blank">
+            <img src="img/map_image.jpg" width="1440" height="416" alt="Карта проезда">
+          </a>
+          <iframe class="contacts__map-frame contacts__map-frame--no-js" src="https://yandex.ru/map-widget/v1/?um=constructor%3A19a7805fbbe8d12b3c5f3ba92136b48581114c4816071e247072659c27cd24cb&amp;source=constructor"></iframe>
+        </div>
+        <div class="contacts__container">
           <div class="contacts__information">
             <h3 class="contacts__title">Nёrds design studio</h3>
             <address class="contacts__address">

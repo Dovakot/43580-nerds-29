@@ -461,6 +461,36 @@ img {
   border: 3px solid var(--special-gray);
 }
 
+.contacts {
+  position: relative;
+}
+
+.contacts__map {
+  background-color: var(--basic-extra-light);
+}
+
+.contacts__map-link {
+  display: block;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.contacts__map-link--hide {
+  display: none;
+}
+
+.contacts__map-link img {
+  display: inherit;
+}
+
+.contacts__map-frame {
+  display: block;
+  width: 100%;
+  height: 416px;
+  border: none;
+}
+
 .contacts__information {
   background-color: var(--basic-white);
 }
