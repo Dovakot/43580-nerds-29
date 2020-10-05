@@ -46,7 +46,7 @@
             <li class="slider__item slider__item--design slider__item--current">
               <div class="slider__item-wrapper">
                 <h3 class="slider__title">Долго, дорого, скрупулезно.</h3>
-                <p class="slider__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                <p class="slider__text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
                 <a class="button slider__link" href="blank.html">Узнать больше</a>
               </div>
             </li>
@@ -67,13 +67,13 @@
           </ul>
           <ul class="list-unstyled slider__control-list">
             <li class="slider__control-item">
-              <button class="slider__control-button slider__control-button--current" type="button">Слайд 1</button>
+              <button class="slider__control-button slider__control-button--current" type="button" aria-label="Слайд 1" tabindex="-1"></button>
             </li>
             <li class="slider__control-item">
-              <button class="slider__control-button" type="button">Слайд 2</button>
+              <button class="slider__control-button" type="button" aria-label="Слайд 2"></button>
             </li>
             <li class="slider__control-item">
-              <button class="slider__control-button" type="button">Слайд 3</button>
+              <button class="slider__control-button" type="button" aria-label="Слайд 3"></button>
             </li>
           </ul>
         </div>
@@ -89,7 +89,7 @@
             </li>
             <li class="services__item services__item--app">
               <h3 class="services__title">Приложения</h3>
-              <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+              <p class="services__text">Покорите топ-10 приложений в&nbsp;AppStore и Google Play</p>
               <a class="button services__link services__link--app" href="catalog.html">Заказать</a>
             </li>
             <li class="services__item services__item--slide">
@@ -108,10 +108,10 @@
               Работаем не покладая рук, как роботы.
             </p>
             <p class="about__subtitle">Выполняем заказы на разработку:</p>
-            <ul class="about__list">
-              <li>Веб-сайтов любой сложности</li>
-              <li>Мобильных приложений для iOS и Android</li>
-              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            <ul class="list-unstyled about__list">
+              <li class="about__item">Веб-сайтов любой сложности</li>
+              <li class="about__item">Мобильных приложений для iOS и Android</li>
+              <li class="about__item">Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
           </div>
           <div class="about__statistics">
@@ -176,7 +176,7 @@
           <div class="contacts__information">
             <h3 class="contacts__title">Nёrds design studio</h3>
             <address class="contacts__address">
-              <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <p class="contacts__text">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
               <p class="contacts__text">
                 <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
               </p>
@@ -190,13 +190,13 @@
         <div class="container social__container">
           <ul class="list-unstyled social__list">
             <li class="social__item">
-              <a class="social__link social__link--vk" href="https://vk.com/" target="_blank">Вконтакте</a>
+              <a class="social__link social__link--vk" href="https://vk.com/" target="_blank" aria-label="Вконтакте"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--fb" href="https://facebook.com/" target="_blank">Facebook</a>
+              <a class="social__link social__link--fb" href="https://facebook.com/" target="_blank" aria-label="Facebook"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--inst" href="https://instagram.com/" target="_blank">Instagram</a>
+              <a class="social__link social__link--inst" href="https://instagram.com/" target="_blank" aria-label="Instagram"></a>
             </li>
           </ul>
           <div class="social__discount">
@@ -206,10 +206,28 @@
         </div>
       </section>
     </footer>
-    <div class="modal" tabindex="-1">
-      <h2 class="modal__title">Напишите нам</h2>
-
-      <button class="modal__button" type="button">Закрыть модальное окно</button>
+    <div class="modal modal--hide" tabindex="-1">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Напишите нам</h2>
+        <form class="modal__form modal-form" method="post" action="https://echo.htmlacademy.ru">
+          <ul class="list-unstyled modal-form__list">
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-name">Ваше имя:</label>
+              <input class="modal-form__field" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+            </li>
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-email">Ваш email:</label>
+              <input class="modal-form__field" id="user-email" type="email" name="user-email" placeholder="email@example.com">
+            </li>
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-text">Текст письма:</label>
+              <textarea class="modal-form__field" id="user-text" name="user-text" rows="5" placeholder="В свободной форме"></textarea>
+            </li>
+          </ul>
+          <button class="button modal-form__button" type="submit">Отправить</button>
+        </form>
+        <button class="modal__button" type="button" aria-label="Закрыть модальное окно"></button>
+      </div>
     </div>
   </body>
 </html>
