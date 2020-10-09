@@ -3,77 +3,110 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nerds">
-      </a>
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="blank.html">Студия</a>
-          </li>
-          <li class="nav__item">
-            <a href="blank.html">Клиенты</a>
-          </li>
-          <li class="nav__item">
-            <a href="catalog.html">Магазин</a>
-          </li>
-          <li class="nav__item">
-            <a href="blank.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="header__nav user-nav">
-        <li class="user-nav__item">
-          <a href="blank.html">Корзина</a>
-        </li>
-      </ul>
+      <div class="container header__container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="img/logo_nerds.svg" width="160" height="66" alt="Логотип Nerds">
+          </a>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="list-unstyled nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="blank.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="blank.html">Клиенты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="blank.html">Контакты</a>
+            </li>
+          </ul>
+          <ul class="list-unstyled nav__list nav__list--user">
+            <li class="nav__item">
+              <a class="nav__link nav__link--cart" href="blank.html">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="content">
-      <h1>Этот раздел находится в стадии разработки</h1>
+      <div class="content__jumbotron">
+        <h1 class="container content__jumbotron-title">Этот раздел находится в стадии разработки</h1>
+      </div>
     </main>
     <footer class="footer">
       <section class="contacts">
-        <h2>Контакты</h2>
-        <a class="contacts__map-link" href="#" target="_blank">
-          <img src="img/map.jpg" width="1440" height="416" alt="Карта проезда">
-        </a>
-        <div class="contacts__information">
-          <h3 class="contacts__title">Nёrds design studio</h3>
-          <address class="contacts__address">
-            <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p class="contacts__text">
-              <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-            </p>
-          </address>
-          <a class="contacts__link" href="blank.html">Напишите нам</a>
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__map">
+          <a class="contacts__map-link contacts__map-link--hide" href="https://yandex.ru/maps/-/CCQ3iKHZdC" target="_blank">
+            <img src="img/map_image.jpg" width="1440" height="416" alt="Карта проезда">
+          </a>
+          <iframe class="contacts__map-frame contacts__map-frame--no-js" src="https://yandex.ru/map-widget/v1/?um=constructor%3A19a7805fbbe8d12b3c5f3ba92136b48581114c4816071e247072659c27cd24cb&amp;source=constructor"></iframe>
+        </div>
+        <div class="contacts__container">
+          <div class="contacts__information">
+            <h3 class="contacts__title">Nёrds design studio</h3>
+            <address class="contacts__address">
+              <p class="contacts__text">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+              <p class="contacts__text">
+                <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+              </p>
+            </address>
+            <a class="button contacts__link" href="blank.html">Напишите нам</a>
+          </div>
         </div>
       </section>
       <section class="social">
-        <h2>Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/" target="_blank">Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="https://facebook.com/" target="_blank">Facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--inst" href="https://instagram.com/" target="_blank">Instagram</a>
-          </li>
-        </ul>
-        <div class="social__discount">
-          <p class="social__slogan">Давайте дружить, это выгодно!</p>
-          <p class="social__text">Скидка 10% для друзей из социальных сетей.</p>
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <div class="container social__container">
+          <ul class="list-unstyled social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/" target="_blank" aria-label="Вконтакте"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="https://facebook.com/" target="_blank" aria-label="Facebook"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--inst" href="https://instagram.com/" target="_blank" aria-label="Instagram"></a>
+            </li>
+          </ul>
+          <div class="social__discount">
+            <p class="social__slogan">Давайте дружить, это выгодно!</p>
+            <p class="social__text">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
         </div>
       </section>
     </footer>
-    <div class="modal" tabindex="-1">
-      <h2 class="modal__title">Напишите нам</h2>
-
-      <button class="modal__button" type="button">Закрыть модальное окно</button>
+    <div class="modal modal--hide" tabindex="-1">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Напишите нам</h2>
+        <form class="modal__form modal-form" method="post" action="https://echo.htmlacademy.ru">
+          <ul class="list-unstyled modal-form__list">
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-name">Ваше имя:</label>
+              <input class="modal-form__field" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+            </li>
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-email">Ваш e-mail:</label>
+              <input class="modal-form__field" id="user-email" type="email" name="user-email" placeholder="email@example.com">
+            </li>
+            <li class="modal-form__item">
+              <label class="modal-form__label" for="user-text">Текст письма:</label>
+              <textarea class="modal-form__field" id="user-text" name="user-text" rows="5" placeholder="В свободной форме"></textarea>
+            </li>
+          </ul>
+          <button class="button modal-form__button" type="submit">Отправить</button>
+        </form>
+        <button class="modal__button" type="button" aria-label="Закрыть модальное окно"></button>
+      </div>
     </div>
   </body>
 </html>
