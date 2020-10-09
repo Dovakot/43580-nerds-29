@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
+    <title>HTML Academy: Нёрдс | Страница товаров</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -43,102 +43,185 @@
       </div>
       <div class="container content__container">
         <section class="filters">
-          <h2>Фильтры</h2>
+          <h2 class="visually-hidden">Фильтры</h2>
+          <form class="filters__form" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filters__group filters__group--range">
+              <legend class="filters__title filters__title--range">Стоимость:</legend>
+              <div class="filters__range range-filter">
+                <div class="range-filter__sliders">
+                  <div class="range-filter__scale">
+                    <div class="range-filter__bar"></div>
+                  </div>
+                  <div class="range-filter__toggle-group">
+                    <div class="range-filter__toggle range-filter__toggle--min" tabindex="0"></div>
+                    <div class="range-filter__toggle range-filter__toggle--max" tabindex="0"></div>
+                  </div>
+                </div>
+                <div class="range-filter__controls">
+                  <label class="range-filter__price">
+                    от <input class="range-filter__field" type="text" name="min-price" value="0">
+                  </label>
+                  <label class="range-filter__price">
+                    до <input class="range-filter__field" type="text" name="max-price" value="15 000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filters__group filters__group--radio">
+              <legend class="filters__title">Сетка:</legend>
+              <ul class="list-unstyled">
+                <li class="filters__item-radio">
+                  <input class="visually-hidden filters__field filters__field--radio" id="filter-adaptive" type="radio" name="grid-type" value="adaptive" checked>
+                  <label for="filter-adaptive">Адаптивная</label>
+                </li>
+                <li class="filters__item-radio">
+                  <input class="visually-hidden filters__field filters__field--radio" id="filter-fixed" type="radio" name="grid-type" value="fixed">
+                  <label for="filter-fixed">Фиксированная</label>
+                </li>
+                <li class="filters__item-radio">
+                  <input class="visually-hidden filters__field filters__field--radio" id="filter-rubber" type="radio" name="grid-type" value="rubber">
+                  <label for="filter-rubber">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filters__group filters__group--checkbox">
+              <legend class="filters__title">Особенности:</legend>
+              <ul class="list-unstyled">
+                <li class="filters__item-checkbox">
+                  <input class="visually-hidden filters__field filters__field--checkbox" id="filter-slayder" type="checkbox" name="block-slayder" value="slayder" checked>
+                  <label for="filter-slayder">Cлайдер</label>
+                </li>
+                <li class="filters__item-checkbox">
+                  <input class="visually-hidden filters__field filters__field--checkbox" id="filter-advantage" type="checkbox" name="block-advantage" value="advantage">
+                  <label for="filter-advantage">Блок преймуществ</label>
+                </li>
+                <li class="filters__item-checkbox">
+                  <input class="visually-hidden filters__field filters__field--checkbox" id="filter-news" type="checkbox" name="block-news" value="news" checked>
+                  <label for="filter-news">Новости</label>
+                </li>
+                <li class="filters__item-checkbox">
+                  <input class="visually-hidden filters__field filters__field--checkbox" id="filter-gallery" type="checkbox" name="block-gallery" value="gallery">
+                  <label for="filter-gallery">Галерея</label>
+                </li>
+                <li class="filters__item-checkbox">
+                  <input class="visually-hidden filters__field filters__field--checkbox" id="filter-basket" type="checkbox" name="block-basket" value="basket">
+                  <label for="filter-basket">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button filters__button" type="submit">Показать</button>
+          </form>
         </section>
         <section class="sorting">
           <h2 class="sorting__title">Сортировать:</h2>
-          <ul class="list-unstyled sorting__list">
-            <li class="sorting__item">
-              <button class="sorting__button sorting__button--current" type="button" tabindex="-1">По цене</button>
-            </li>
-            <li class="sorting__item">
-              <button class="sorting__button" type="button">По типу</button>
-            </li>
-            <li class="sorting__item">
-              <button class="sorting__button" type="button">По названию</button>
-            </li>
-            <li class="sorting__item sorting__item--icon">
-              <button class="sorting__button sorting__button--down sorting__button--current" type="button" tabindex="-1">По убыванию</button>
-            </li>
-            <li class="sorting__item sorting__item--icon">
-              <button class="sorting__button sorting__button--upp" type="button">По возрастанию</button>
-            </li>
-          </ul>
+          <div class="sorting__wrapper">
+            <ul class="list-unstyled sorting__list">
+              <li class="sorting__item">
+                <button class="sorting__button sorting__button--current" type="button" tabindex="-1">По цене</button>
+              </li>
+              <li class="sorting__item">
+                <button class="sorting__button" type="button">По типу</button>
+              </li>
+              <li class="sorting__item">
+                <button class="sorting__button" type="button">По названию</button>
+              </li>
+            </ul>
+            <ul class="list-unstyled sorting__list sorting__list--icon">
+              <li class="sorting__item">
+                <button class="sorting__button-icon sorting__button-icon--down sorting__button-icon--current" type="button" aria-label="По убыванию" tabindex="-1"></button>
+              </li>
+              <li class="sorting__item">
+                <button class="sorting__button-icon sorting__button-icon--upp" type="button" aria-label="По возрастанию"></button>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="products">
           <h2 class="visually-hidden">Продукция</h2>
           <ul class="list-unstyled products__list">
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_sedona.jpg" width="358" height="578" alt="Сайт Sedona">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">Sedona</h3>
-                  </a>
-                  <p class="card__text">Информационный сайт для туристов</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_sedona.jpg" width="358" height="578" alt="Сайт Sedona">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">Sedona</h3>
+                    </a>
+                    <p class="card__text">Информационный сайт для&nbsp;туристов</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_pink.jpg" width="358" height="578" alt="Лендинг Pink App">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">Pink App</h3>
-                  </a>
-                  <p class="card__text">Продуктовый лендинг приложения для iOS и Android</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_pink.jpg" width="358" height="578" alt="Лендинг Pink App">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">Pink App</h3>
+                    </a>
+                    <p class="card__text">Продуктовый лендинг приложения для&nbsp;iOS и&nbsp;Android</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_barbershop.jpg" width="358" height="578" alt="Сайт Barbershop">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">Barbershop</h3>
-                  </a>
-                  <p class="card__text">Сайт салона красоты. Для мужчин, да.</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_barbershop.jpg" width="358" height="578" alt="Сайт Barbershop">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">Barbershop</h3>
+                    </a>
+                    <p class="card__text">Сайт салона красоты. Для&nbsp;мужчин, да.</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_mishka.jpg" width="358" height="578" alt="Интернет-магазин Mishka">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">Mishka</h3>
-                  </a>
-                  <p class="card__text">Интернет-магазин вязаных игрушек</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_mishka.jpg" width="358" height="578" alt="Интернет-магазин Mishka">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">Mishka</h3>
+                    </a>
+                    <p class="card__text">Интернет-магазин вязаных&nbsp;игрушек</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_aplus.jpg" width="358" height="578" alt="Лендинг A Plus">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">A Plus</h3>
-                  </a>
-                  <p class="card__text">Лендинг курсов повышения квалификации</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_aplus.jpg" width="358" height="578" alt="Лендинг A Plus">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">A Plus</h3>
+                    </a>
+                    <p class="card__text">Лендинг курсов повышения квалификации</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
             <li class="products__item">
-              <figure class="products__card card">
-                <img class="card__image" src="img/website_kvast.jpg" width="358" height="578" alt="Промо-сайт Кваст">
-                <figcaption class="card__description" tabindex="0">
-                  <a href="blank.html">
-                    <h3 class="card__name">Кваст</h3>
-                  </a>
-                  <p class="card__text">Промо-сайт производителя крафтового кваса</p>
-                  <button class="button card__price" type="button">9 900 &#8381;</button>
-                </figcaption>
-              </figure>
+              <div class="products__card card">
+                <figure class="card__wrapper">
+                  <img class="card__image" src="img/website_kvast.jpg" width="358" height="578" alt="Промо-сайт Кваст">
+                  <figcaption class="card__description" tabindex="0">
+                    <a class="card__link" href="blank.html">
+                      <h3 class="card__name">Кваст</h3>
+                    </a>
+                    <p class="card__text">Промо-сайт производителя крафтового кваса</p>
+                    <button class="button card__price" type="button">9 900 &#8381;</button>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
           </ul>
           <ul class="list-unstyled products__pagination pagination">
