@@ -128,7 +128,6 @@ img {
   line-height: 50px;
   font-weight: 500;
   color: #ffffff;
-  vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
   background-color: var(--basic-light-red);
@@ -842,22 +841,14 @@ img {
 .sorting__button-icon::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  border: 5px solid transparent;
-  opacity: inherit;
-}
-
-.sorting__button-icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 10;
   border: 5px solid transparent;
   opacity: 0.2;
 }
 
 .sorting__button-icon--down::before {
+  top: 0;
+  left: 0;
   border-top: 10px solid;
 }
 
@@ -1278,6 +1269,15 @@ img {
   border-color: var(--basic-black);
 }
 
+.modal-form__field:focus::placeholder {
+  opacity: 1;
+}
+
+.modal-form__field:invalid {
+  color: var(--basic-red);
+  border-color: var(--basic-red);
+}
+
 .modal-form__button {
   min-width: 260px;
 }
@@ -1298,6 +1298,7 @@ img {
 
 .modal__button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .modal__button:active {
