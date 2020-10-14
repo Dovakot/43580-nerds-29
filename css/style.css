@@ -1184,9 +1184,6 @@ img {
   bottom: 0;
   left: 0;
   z-index: 1000;
-}
-
-.modal--hide {
   display: none;
 }
 
@@ -1266,6 +1263,7 @@ img {
 }
 
 .modal-form__field:focus {
+  outline: 0;
   border-color: var(--basic-black);
 }
 
@@ -1273,9 +1271,11 @@ img {
   opacity: 1;
 }
 
-.modal-form__field:invalid {
-  color: var(--basic-red);
-  border-color: var(--basic-red);
+.modal-form__field--invalid,
+.modal-form__field[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+.modal-form__field[type="email"]:invalid:focus:not(:placeholder-shown) {
+  color: red;
+  border-color: red;
 }
 
 .modal-form__button {
