@@ -150,6 +150,10 @@ img {
   outline-color: var(--basic-extra-dark);
 }
 
+.modal-show {
+  overflow: hidden;
+}
+
 .header {
   padding: 49px 0 0;
   background-color: var(--basic-extra-light);
@@ -1185,22 +1189,23 @@ img {
   left: 0;
   z-index: 1000;
   display: none;
+  padding-top: calc((100vh - 590px) / 2);
+  overflow-y: auto;
 }
 
 .modal--show {
   display: block;
+  animation: show 0.6s;
 }
 
 .modal__wrapper {
   position: relative;
-  top: 50%;
   width: 960px;
   min-height: 590px;
   margin: 0 auto;
   padding: 64px 100px;
   background-color: var(--basic-white);
   box-shadow: 0 20px 40px 0 rgba(var(--special-black), 0.4);
-  transform: translateY(-50%);
 }
 
 .modal__title {
@@ -1271,11 +1276,14 @@ img {
   opacity: 1;
 }
 
-.modal-form__field--invalid,
 .modal-form__field[type="email"]:invalid:not(:focus):not(:placeholder-shown),
 .modal-form__field[type="email"]:invalid:focus:not(:placeholder-shown) {
-  color: red;
-  border-color: red;
+  color: var(--basic-red);
+  border-color: var(--basic-red);
+}
+
+.modal-form__field--invalid {
+  animation: invalid 0.7s;
 }
 
 .modal-form__button {
@@ -1303,4 +1311,38 @@ img {
 
 .modal__button:active {
   opacity: 0.1;
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes invalid {
+  0%,
+  100% {
+    color: var(--basic-red);
+    border-color: var(--basic-red);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-3px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px);
+  }
 }
