@@ -170,7 +170,7 @@
           <a class="contacts__map-link contacts__map-link--hide" href="https://yandex.ru/maps/-/CCQ3iKHZdC" target="_blank">
             <img src="img/map_image.jpg" width="1440" height="416" alt="Карта проезда">
           </a>
-          <iframe class="contacts__map-frame contacts__map-frame--no-js" src="https://yandex.ru/map-widget/v1/?um=constructor%3A19a7805fbbe8d12b3c5f3ba92136b48581114c4816071e247072659c27cd24cb&amp;source=constructor"width="1440" height="416"></iframe>
+          <iframe class="contacts__map-frame contacts__map-frame--no-js" src="https://yandex.ru/map-widget/v1/?um=constructor%3A19a7805fbbe8d12b3c5f3ba92136b48581114c4816071e247072659c27cd24cb&amp;source=constructor" width="1440" height="416"></iframe>
         </div>
         <div class="contacts__container">
           <div class="contacts__information">
@@ -181,7 +181,7 @@
                 <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
               </p>
             </address>
-            <a class="button contacts__link" href="blank.html">Напишите нам</a>
+            <a class="button contacts__link" href="modal.html">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -206,9 +206,9 @@
         </div>
       </section>
     </footer>
-    <div class="modal" tabindex="-1">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Напишите нам</h2>
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal__wrapper" role="document">
+        <h2 class="modal__title" id="modal-title">Напишите нам</h2>
         <form class="modal__form modal-form" method="post" action="https://echo.htmlacademy.ru">
           <ul class="list-unstyled modal-form__list">
             <li class="modal-form__item">
