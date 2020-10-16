@@ -15,7 +15,7 @@ const mapLink = document.querySelector('.contacts__map-link');
 const mapIframe = document.querySelector('.contacts__map-frame');
 
 mapIframe.classList.remove('contacts__map-frame--hide');
-mapLink.classList.add('contacts__map-link--hide');
+mapLink.remove();
 
 /* Слайдер */
 
