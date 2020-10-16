@@ -113,7 +113,7 @@ const writeDataToFields = function (filds) {
 };
 
 buttonOpenModal.addEventListener('click', function (evt) {
-  evt.preventDefault()
+  evt.preventDefault();
   modalForm.reset();
 
   const focusField = writeDataToFields(modalListFilds);
