@@ -9,6 +9,14 @@ const modalForm = modal.querySelector('.modal-form');
 const modalListFilds = modalForm.querySelectorAll('.modal-form__field');
 const storage = localStorage;
 
+/* Карта */
+
+const mapLink = document.querySelector('.contacts__map-link');
+const mapIframe = document.querySelector('.contacts__map-frame');
+
+mapIframe.classList.remove('contacts__map-frame--hide');
+mapLink.classList.add('contacts__map-link--hide');
+
 /* Слайдер */
 
 if (slider) {
