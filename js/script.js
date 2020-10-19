@@ -9,6 +9,14 @@ const modalForm = modal.querySelector('.modal-form');
 const modalListFilds = modalForm.querySelectorAll('.modal-form__field');
 const storage = localStorage;
 
+/* Карта */
+
+const mapLink = document.querySelector('.contacts__map-link');
+const mapIframe = document.querySelector('.contacts__map-frame');
+
+mapIframe.classList.remove('contacts__map-frame--hide');
+mapLink.remove();
+
 /* Слайдер */
 
 if (slider) {
@@ -105,7 +113,7 @@ const writeDataToFields = function (filds) {
 };
 
 buttonOpenModal.addEventListener('click', function (evt) {
-  evt.preventDefault()
+  evt.preventDefault();
   modalForm.reset();
 
   const focusField = writeDataToFields(modalListFilds);
