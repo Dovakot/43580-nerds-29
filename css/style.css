@@ -127,7 +127,7 @@ img {
   font-size: 16px;
   line-height: 50px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--basic-white);
   text-align: center;
   text-transform: uppercase;
   background-color: var(--basic-light-red);
@@ -168,6 +168,10 @@ img {
 .header__wrapper {
   display: flex;
   align-items: flex-start;
+}
+
+.header__logo[href]:hover {
+  opacity: 0.6;
 }
 
 .header__logo[href]:active {
@@ -1055,7 +1059,6 @@ img {
   top: 50%;
   left: calc((100% - 1160px) / 2);
   z-index: 10;
-  width: 1160px;
   transform: translateY(-50%);
   width: 320px;
   padding: 50px;
